@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geek Life</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="/static/hero/img/logo2.png" alt="Logo">
+        </a>
+    </header>
+
+    <nav class="navegacion">
+        <a class="navegacion__enlace" href="{{ url_for('index') }}">Tienda</a>
+        <a class="navegacion__enlace" href="{{ url_for('nosotros') }}">Nosotros</a>
+        <a class="navegacion__enlace" href="{{ url_for('producto') }}">Producto</a>
+        <a class="navegacion__enlace" href="{{ url_for('registro') }}">Registro</a>
+        <a class="navegacion__enlace navegacion__enlace--activo" href="{{ url_for('inicio') }}">Inicio</a>
+    </nav>
+
+    <main class="contenedor">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="flash-messages">
+            {% for message in messages %}
+            <div class="flash-message">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        <h1>Inicio de Sesión</h1>
+        <form class="formulario" method="POST" action="{{ url_for('login') }}">
+            <fieldset>
+                <div class="contenedor-campos">
+                    <div class="campo">
+                        <div class="campo">
+                            <label>Correo</label>
+                            <input class="input-text" type="email" name="correo" placeholder="Mail">
+                        </div>
+                        <div class="campo mensaje">
+                            <label>Clave</label>
+                            <input class="input-text" type="password" name="clave" placeholder="*******">
+                        </div>
+                    </div>
+                </div>
+                <div class="campo">
+                    <input class="tamaño boton w-sm-100" type="submit" value="Ingresar">
+                </div>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__texto">Geek Life - Todos los derechos Reservados 2023.</p>
+    </footer>
+</body>
+
+</html>

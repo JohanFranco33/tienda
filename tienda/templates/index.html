@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geek Life</title>
+    <!-- normalize normalizacion de pag -->
+    <link rel="stylesheet" href="css/normailize.css"> <!-- contiene subecciones  -->
+    <!-- conexion a ccs   -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Fuente  -->
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <!-- Logo -->
+        <a href="index.html">
+            <link rel="stylesheet" href="/static/style.css">
+            <img class="header__logo" src="/static/hero/img/logo2.png" alt="Logo">
+        </a>
+    </header>
+
+    <!-- Navegacion  -->
+    <nav class="navegacion">
+        <a class="navegacion__enlace navegacion__enlace--activo" href="{{ url_for('index') }}">Tienda</a>
+
+        <a class="navegacion__enlace" href="{{ url_for('nosotros') }}">Nosotros</a>
+        <a class="navegacion__enlace " href="{{ url_for('producto') }}">Producto</a>
+        <a class="navegacion__enlace" href="{{ url_for('registro') }}">Registro</a>
+        <a class="navegacion__enlace" href="{{ url_for('inicio') }}">Inicio</a>
+    </nav>
+
+
+
+
+    <main class="contenedor">
+        <h1>Nuestros Productos</h1>
+        <!-- producto   -->
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="flash-messages">
+            {% for message in messages %}
+            <div class="flash-message">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+        <div class="grid">
+            <div class="producto">
+                <a href="Producto.html">
+                    <img class="producto__imagen" src="/static/hero/img/ima1.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Demon Slayer</p>
+                        <p class="producto__precio">38.000 + envio</p>
+                    </div>
+
+                </a>
+            </div> <!-- fin producto   -->
+            <div class="producto">
+                <a href="Producto.html">
+                    <img class="producto__imagen" src="/static/hero/img/ima2.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Demon Slayer</p>
+                        <p class="producto__precio">38.000 + envio</p>
+                    </div>
+
+                </a>
+            </div> <!-- fin producto   -->
+
+
+            <div class="producto">
+                <a href="Producto.html">
+                    <img class="producto__imagen" src="/static/hero/img/ima3.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Billi Eilish</p>
+                        <p class="producto__precio">38.000 + envio</p>
+                    </div>
+
+                </a>
+            </div> <!-- fin producto   -->
+
+            <div class="producto">
+                <a href="Producto.html">
+                    <img class="producto__imagen" src="/static/hero/img/ima4.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Twenty One</p>
+                        <p class="producto__precio">38.000 + envio</p>
+                    </div>
+
+                </a>
+            </div> <!-- fin producto   -->
+            <div class="producto">
+                <a href="Producto.html">
+                    <img class="producto__imagen" src="/static/hero/img/ima5.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Twenty One</p>
+                        <p class="producto__precio">38.000 + envio</p>
+                    </div>
+
+                </a>
+            </div> <!-- fin producto   -->
+
+            <div class="producto">
+                <a href="Producto.html">
+                    <img class="producto__imagen" src="/static/hero/img/ima6.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Naruto</p>
+                        <p class="producto__precio">38.000 + envio</p>
+                    </div>
+
+                </a>
+            </div> <!-- fin producto   -->
+
+            <div class="producto">
+                <a href="Producto.html">
+                    <img class="producto__imagen" src="/static/hero/img/ima7.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Halo</p>
+                        <p class="producto__precio">38.000 + envio</p>
+                    </div>
+
+                </a>
+            </div> <!-- fin producto   -->
+
+            <div class="producto">
+                <a href="Producto.html">
+                    <img class="producto__imagen" src="/static/hero/img/ima8.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">One Pice</p>
+                        <p class="producto__precio">38.000 + envio</p>
+                    </div>
+
+                </a>
+            </div> <!-- fin producto   -->
+
+            <div class="producto">
+                <a href="Producto.html">
+                    <img class="producto__imagen" src="/static/hero/img/ima9.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Kisss</p>
+                        <p class="producto__precio">38.000 + envio</p>
+                    </div>
+
+                </a>
+            </div> <!-- fin producto   -->
+
+            <div class="producto">
+                <a href="Producto.html">
+                    <img class="producto__imagen" src="/static/hero/img/ima10.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Kiss</p>
+                        <p class="producto__precio">38.000 + envio</p>
+                    </div>
+
+                </a>
+            </div> <!-- fin producto   -->
+
+            <div class="producto">
+                <a href="Producto.html">
+                    <img class="producto__imagen" src="/static/hero/img/ima11.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Scorpion</p>
+                        <p class="producto__precio">38.000 + envio</p>
+                    </div>
+
+                </a>
+            </div> <!-- fin producto   -->
+
+            <div class="producto">
+                <a href="Producto.html">
+                    <img class="producto__imagen" src="/static/hero/img/ima12.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Scorpion</p>
+                        <p class="producto__precio">38.000 + envio</p>
+                    </div>
+
+                </a>
+            </div> <!-- fin producto   -->
+
+            <div class="producto">
+                <a href="Producto.html">
+                    <img class="producto__imagen" src="/static/hero/img/ima13.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Angra</p>
+                        <p class="producto__precio">38.000 + envio</p>
+                    </div>
+
+                </a>
+            </div> <!-- fin producto   -->
+            <div class="producto">
+                <a href="Producto.html">
+                    <img class="producto__imagen" src="/static/hero/img/ima14.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Hallowen</p>
+                        <p class="producto__precio">38.000 + envio</p>
+                    </div>
+
+                </a>
+            </div> <!-- fin producto   -->
+
+            <div class="producto">
+                <a href="Producto.html">
+                    <img class="producto__imagen" src="/static/hero/img/ima15.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Tokyo Ghoul</p>
+                        <p class="producto__precio">38.000 + envio</p>
+                    </div>
+
+                </a>
+            </div> <!-- fin producto   -->
+
+            <div class="producto">
+                <a href="Producto.html">
+                    <img class="producto__imagen" src="/static/hero/img/ima16.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Attac On Titan</p>
+                        <p class="producto__precio">38.000 + envio</p>
+                    </div>
+
+                </a>
+            </div> <!-- fin producto   -->
+            <!-- graficos   -->
+            <div class="grafico grafico--camisas"></div>
+            <div class="grafico grafico--node"></div>
+        </div>
+    </main>
+
+
+
+    <!-- Pie de pagina   -->
+    <footer class="footer">
+        <p class="footer__texto">Geek Life - Todos los derechos Reservados 2023.</p>
+
+    </footer>
+</body>
+
+</html>

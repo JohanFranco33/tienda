@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geek Life</title>
+    <!-- normalize normalizacion de pag -->
+    <link rel="stylesheet" href="/static/css/normalize.css"> <!-- contiene subecciones  -->
+    <!-- conexion a ccs   -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Fuente  -->
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <!-- Logo -->
+        <a href="{{ url_for('index') }}">
+            <img class="header__logo" src="/static/hero/img/logo2.png" alt="Logo">
+        </a>
+    </header>
+
+    <!-- Navegacion  -->
+    <nav class="navegacion">
+        <a class="navegacion__enlace" href="{{ url_for('index') }}">Tienda</a>
+        <a class="navegacion__enlace" href="{{ url_for('nosotros') }}">Nosotros</a>
+        <a class="navegacion__enlace navegacion__enlace--activo" href="{{ url_for('registro') }}">Volver a Registro</a>
+        <a class="navegacion__enlace" href="{{ url_for('inicio') }}">Inicio</a>
+    </nav>
+
+    <!-- Registro -->
+    <main class="contenedor">
+        <h1>Registrate</h1>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        <form class="formulario" action="{{ url_for('registro') }}" method="POST">
+            <fieldset>
+                <!-- formulario -->
+                <legend>Registrate llenando todos los campos</legend>
+                <div class="contenedor-campos">
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input id="nombre" class="input-text" type="text" name="nombre" placeholder="Tu Nombre"
+                            required>
+                    </div>
+                    <div class="campo">
+                        <label for="telefono">Telefono</label>
+                        <input id="telefono" class="input-text" type="number" name="telefono" placeholder="Tu Telefono"
+                            required>
+                    </div>
+                    <div class="campo">
+                        <label for="correo">Correo</label>
+                        <input id="correo" class="input-text" type="email" name="correo" placeholder="Mail" required>
+                    </div>
+                    <div class="campo mensaje">
+                        <label for="clave">Clave</label>
+                        <input id="clave" class="input-text" type="password" name="clave" placeholder="*********"
+                            required>
+                    </div>
+                </div>
+                <div class="enviar alinear-derecha flex">
+                    <div class="campo">
+                        <input class="tamaño boton w-sm-100" type="submit" value="Registrar">
+                        </ </div>
+            </fieldset>
+        </form>
+    </main>
+
+    <!-- Pie de pagina -->
+    <footer class="footer">
+        <p class="footer__texto">Geek Life - Todos los derechos Reservadors 2023.</p>
+    </footer>
+</body>
+
+</html>

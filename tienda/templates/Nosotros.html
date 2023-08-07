@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geek Life</title>
+    <!-- normalize normalizacion de pag -->
+    <link rel="stylesheet" href="css/normalize.css"> <!-- contiene subecciones  -->
+    <!-- conexion a ccs   -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Fuente  -->
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <!-- Logo -->
+        <a href="index.html">
+            <img class="header__logo" src="/static/hero/img/logo2.png" alt="Logo">
+
+        </a>
+    </header>
+
+    <!-- Navegacion  -->
+    <nav class="navegacion">
+        <a class="navegacion__enlace " href="{{ url_for('index') }}">Tienda</a>
+        <a class="navegacion__enlace navegacion__enlace--activo " href="{{ url_for('nosotros') }}"> Nosotros</a>
+        <a class="navegacion__enlace " href="{{ url_for('producto') }}">Producto</a>
+        <a class="navegacion__enlace " href="{{ url_for('registro') }}">Registro</a>
+        <a class="navegacion__enlace " href="{{ url_for('inicio') }}">Inicio</a>
+    </nav>
+
+
+
+    <!-- Nosotros  -->
+    <main class="contenedor">
+        <h1>Nosotros</h1>
+
+        <div class="nosotros">
+            <div class="nosotros__contenido">
+                <p>Nunc non blandit leo. Fusce pulvinar nibh et ullamcorper porttitor.
+                    Pellentesque aliquam nisl tincidunt odio sollicitudin, id rutrum risus pharetra. Integer mattis
+                    posuere
+                    neque, sit amet dignissim eros interdum eget. Aenean sollicitudin tincidunt ex, sit amet commodo
+                    justo
+                    ultrices eget. Pellentesque sagittis lorem sit amet placerat rhoncus. Nulla facilisi. Donec placerat
+                    posuere sem,.</p>
+
+                <p>Etiam ultrices turpis vitae molestie luctus. Nunc ultricies diam sit amet eleifend accumsan. Aliquam
+                    blandit malesuada enim sit amet euismod. Curabitur fringilla erat eget augue faucibus, nec fermentum
+                    sem
+                </p>
+
+            </div>
+            <!-- imagen nosotros   -->
+
+            <img class="nosotros__imagen" src="/static/hero/img/nosotros.jpg" alt="imagen nosotros">
+        </div>
+
+    </main>
+    <!-- bloques    -->
+    <section class="contenerdor comprar">
+        <h2 class="comprar__titulo">¿Porque comprar con nosotros? </h2>
+
+
+        <div class="bloques">
+            <div class="bloque">
+                <img class="bloque__imagen" src="/static/hero/img/icono_1.png" alt="por que comprar">
+                <h3 class="bloque__titulo">El mejor precio</h3>
+
+                <p>Etiam ultrices turpis vitae molestie luctus. Nunc ultricies diam sit amet eleifend accumsan. Aliquam
+                    blandit</p>
+            </div>
+
+
+
+            <div class="bloque">
+                <img class="bloque__imagen" src="/static/hero/img/icono_2.png" alt="por que comprar">
+                <h3 class="bloque__titulo">Para Todos</h3>
+
+                <p>Etiam ultrices turpis vitae molestie luctus. Nunc ultricies diam sit amet eleifend accumsan.
+                    Aliquam
+                    blandit</p>
+            </div>
+
+
+            <div class="bloque">
+                <img class="bloque__imagen" src="/static/hero/img/icono_3.png" alt="por que comprar">
+                <h3 class="bloque__titulo">Envio Rapido</h3>
+
+                <p>Etiam ultrices turpis vitae molestie luctus. Nunc ultricies diam sit amet eleifend accumsan.
+                    Aliquam
+                    blandit</p>
+            </div>
+
+
+            <div class="bloque">
+                <img class="bloque__imagen" src="/static/hero/img/icono_4.png" alt="por que comprar">
+                <h3 class="bloque__titulo">La Mejor calidad</h3>
+
+                <p>Etiam ultrices turpis vitae molestie luctus. Nunc ultricies diam sit amet eleifend
+                    accumsan. Aliquam
+                    blandit</p>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Pie de pagina   -->
+    <footer class="footer">
+        <p class="footer__texto">Geek Life - Todos los derechos Reservadors 2023.</p>
+
+    </footer>
+</body>
+
+</html>

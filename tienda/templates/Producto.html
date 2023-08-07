@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geek Life</title>
+    <!-- normalize normalizacion de pag -->
+    <link rel="stylesheet" href="css/normalize.css"> <!-- contiene subecciones  -->
+    <!-- conexion a ccs   -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Fuente  -->
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <!-- Logo -->
+        <a href="index.html">
+            <img class="header__logo" src="/static/hero/img/logo2.png" alt="Logo">
+        </a>
+    </header>
+
+    <!-- Navegacion  -->
+    <nav class="navegacion">
+        <a class="navegacion__enlace navegacion__enlace--activo" href="{{ url_for('index') }}">Tienda</a>
+        <a class="navegacion__enlace" href="{{ url_for('nosotros') }}">Nosotros</a>
+        <a class="navegacion__enlace " href="{{ url_for('producto') }}"> Producto</a>
+        <a class="navegacion__enlace " href="{{ url_for('registro') }}">Registro</a>
+        <a class="navegacion__enlace " href="{{ url_for('inicio') }}">Inicio</a>
+    </nav>
+
+
+
+    <!-- titulo producto  -->
+    <main class="contenedor">
+        <h1>Demon Slayer</h1>
+        <div class="camisa">
+            <img class="ncamisa__imagen" src="/static/hero/img/ima1.jpg" alt="imagen producto">
+
+
+            <!-- descripcion producto  -->
+            <div class="camisa_contenido">
+                <p>neque, sit amet dignissim eros interdum eget. Aenean sollicitudin tincidunt ex, sit amet commodo
+                    justo</p>
+                <!-- formulario   -->
+                <form class="formulario">
+                    <select class="formulario__campo">
+                        <option disabled selected>-- Seleccionar Talla --</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+
+                    </select>
+                    <input class="formulario__campo" type="number" placeholder="cantidad" min="1">
+                    <input class="formulario__submit" type="submit" value="Agregar al carrito" </form>
+            </div>
+        </div>
+    </main>
+    <!-- Pie de pagina   -->
+    <footer class="footer">
+        <p class="footer__texto">Geek Life - Todos los derechos Reservadors 2023.</p>
+
+    </footer>
+</body>
+
+</html>
